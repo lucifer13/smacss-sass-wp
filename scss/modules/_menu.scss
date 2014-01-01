@@ -1,0 +1,18 @@
+//************************
+//    Menu Styles
+//************************
+
+.sitemenu {
+    @include m(item) {
+        padding: 0 1em;
+        &:hover {
+            border-top: 3px solid $red;
+        }
+        @include m(link) {
+            color: $red;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

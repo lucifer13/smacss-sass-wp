@@ -1,0 +1,46 @@
+//************************
+//    Compass Settings
+//************************
+
+@import "compass/typography";
+
+$base-font-size: 22px;
+$base-line-height: 33px;
+@include establish-baseline;
+
+//************************
+//    Global Defaults
+//************************
+
+html {
+    @include debug-vertical-alignment; // Show horizontal line borders.
+    font-family: "Helvetica Neue", Verdana, sans-serif;
+    color: $black;
+    background: $white;
+}
+
+a {
+    // Apply "text-decoration: underline" only on hover.
+    @include hover-link;
+    // Apply colors to different anchor states (normal, hover, active, visited, focus).
+    // Those states not specified will inherit.
+    @include link-colors($blue);
+}
+
+p {
+    // Apply margin at the bottom of all paragraphs with the value of $base-line-height
+    @include margin-trailer;
+}
+
+//************************
+//    Various Headings
+//************************
+
+%h1 { @include adjust-font-size-to(50px) }
+%h2 { @include adjust-font-size-to(40px) }
+%h3 { @include adjust-font-size-to(28px) }
+%h4 { @include adjust-font-size-to(26px) }
+%h5 { @include adjust-font-size-to(24px) }
+%h6 { @include adjust-font-size-to(22px) }
+
+// More info here: http://beta.compass-style.org/reference/compass/typography/

@@ -1,0 +1,19 @@
+//************************
+//    Global mixins
+//************************
+
+// This mixin requires Sass 3.3 or later!
+// It makes possible to make SMACSS classes
+// without typical Sass nesting and bloat.
+@mixin m($text) {
+    @at-root #{&}-#{$text} {
+        @content;
+    }
+}
+
+// This mixin is for styling Javascript-based state classes.
+@mixin s($text) {
+    @at-root #{&}.#{$text} {
+        @content;
+    }
+}

@@ -1,0 +1,12 @@
+//************************
+//    Header Styles
+//************************
+
+.site {
+    @include m(title) {
+        @extend %h1;
+    }
+    @include m(subtitle) {
+        @extend %h3;
+    }
+}

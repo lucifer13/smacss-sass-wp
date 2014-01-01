@@ -1,0 +1,18 @@
+//************************
+//    Content Styles
+//************************
+
+.content {
+    @include rhythm-padding;
+    p {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    @include m(title) {
+        @extend %h2;
+    }
+    @include m(meta) {
+        color: $gray;
+    }
+}
